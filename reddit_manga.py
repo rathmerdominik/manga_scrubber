@@ -6,7 +6,8 @@ import sqlite3
 
 CONF_DIR: str = os.environ["HOME"] + "/.config/manga_scrubber"
 CONF_FILE: str = CONF_DIR + "/login_data.ini"
-DB_CONN = sqlite3.connect(CONF_DIR + "/manga_scrubber.db")
+if os.path.exists(CONF_DIR):
+    DB_CONN = sqlite3.connect(CONF_DIR + "/manga_scrubber.db")
 
 
 class tcolors:
@@ -93,6 +94,8 @@ if __name__ == "__main__":
                 "PRIMARY KEY(id)"
                 ")"
             )
+
+            DB_CONN = sqlite3.connect(CONF_DIR + "/manga_scrubber.db")
 
             os.system("clear")
 
