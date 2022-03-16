@@ -1,2 +1,2 @@
-# manga_scrubber
+# Manga Scrubber
 Scrubs Manga from reddit
