@@ -1,2 +1,3 @@
 # Manga Scrubber
-Scrubs Manga from reddit
+Scrubs new Manga Title from reddit  
+Linux only 
