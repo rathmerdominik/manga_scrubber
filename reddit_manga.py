@@ -123,6 +123,12 @@ if __name__ == "__main__":
                         "creation_date": sub_time.strftime("%d-%m-%Y %H:%M:%S"),
                     }
                 )
+                os.system("clear")
+                for manga in read_manga_submissions():
+                    print(
+                        f"{tcolors.GREEN}{manga[0]} | {tcolors.RED} {manga[2]} - {tcolors.BLUE}{manga[1]}{tcolors.END}"
+                    )
+                    os.system(f"notify-send {manga[2]}")
 
     except KeyboardInterrupt:
         print("\nGoodbye!")
